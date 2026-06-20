@@ -21,11 +21,12 @@ app = Flask(__name__)
 DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
 SIMS_DIR = os.path.join(DATA_DIR, 'simulations')
 
-# Fallback to /tmp/simulations on Vercel or read-only filesystems
-if os.environ.get('VERCEL') or not os.access(DATA_DIR or '.', os.W_OK):
+try:
+    os.makedirs(SIMS_DIR, exist_ok=True)
+except OSError:
+    # Fallback to /tmp/simulations on read-only filesystems (like Vercel)
     SIMS_DIR = '/tmp/simulations'
-
-os.makedirs(SIMS_DIR, exist_ok=True)
+    os.makedirs(SIMS_DIR, exist_ok=True)
 
 
 def load_json(filename):

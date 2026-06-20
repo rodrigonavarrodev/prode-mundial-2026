@@ -25,8 +25,14 @@ FOTMOB_TEAM_MAPPING = {
 }
 
 CACHE_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', 'fotmob_cache.json')
-# Use /tmp for cache on Vercel or in read-only environments
-if os.environ.get('VERCEL') or not os.access(os.path.dirname(CACHE_FILE) or '.', os.W_OK):
+
+# Dynamic write-check to detect read-only mounts (like Vercel)
+try:
+    test_path = os.path.join(os.path.dirname(CACHE_FILE), '.write_test')
+    with open(test_path, 'w') as f:
+        f.write('')
+    os.remove(test_path)
+except OSError:
     CACHE_FILE = '/tmp/fotmob_cache.json'
 
 CACHE_EXPIRY = 3600  # 1 hour
