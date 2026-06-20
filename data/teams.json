@@ -1,0 +1,86 @@
+{
+  "teams": [
+    {"code": "MEX", "name": "México", "flag": "🇲🇽", "group": "A", "ranking": 15, "confederation": "CONCACAF", "xg_base": 1.30, "xga_base": 0.90, "style": "balanced", "host": true},
+    {"code": "RSA", "name": "Sudáfrica", "flag": "🇿🇦", "group": "A", "ranking": 62, "confederation": "CAF", "xg_base": 0.70, "xga_base": 1.20, "style": "defensive"},
+    {"code": "KOR", "name": "Corea del Sur", "flag": "🇰🇷", "group": "A", "ranking": 23, "confederation": "AFC", "xg_base": 1.20, "xga_base": 1.00, "style": "balanced"},
+    {"code": "CZE", "name": "Chequia", "flag": "🇨🇿", "group": "A", "ranking": 45, "confederation": "UEFA", "xg_base": 0.90, "xga_base": 1.10, "style": "balanced"},
+
+    {"code": "CAN", "name": "Canadá", "flag": "🇨🇦", "group": "B", "ranking": 33, "confederation": "CONCACAF", "xg_base": 1.20, "xga_base": 1.10, "style": "offensive", "host": true},
+    {"code": "BIH", "name": "Bosnia y Herzegovina", "flag": "🇧🇦", "group": "B", "ranking": 58, "confederation": "UEFA", "xg_base": 0.85, "xga_base": 1.15, "style": "balanced"},
+    {"code": "QAT", "name": "Qatar", "flag": "🇶🇦", "group": "B", "ranking": 50, "confederation": "AFC", "xg_base": 0.60, "xga_base": 1.40, "style": "defensive"},
+    {"code": "SUI", "name": "Suiza", "flag": "🇨🇭", "group": "B", "ranking": 19, "confederation": "UEFA", "xg_base": 1.30, "xga_base": 0.90, "style": "balanced"},
+
+    {"code": "BRA", "name": "Brasil", "flag": "🇧🇷", "group": "C", "ranking": 3, "confederation": "CONMEBOL", "xg_base": 1.80, "xga_base": 0.80, "style": "offensive"},
+    {"code": "MAR", "name": "Marruecos", "flag": "🇲🇦", "group": "C", "ranking": 14, "confederation": "CAF", "xg_base": 1.20, "xga_base": 0.70, "style": "defensive"},
+    {"code": "HAI", "name": "Haití", "flag": "🇭🇹", "group": "C", "ranking": 90, "confederation": "CONCACAF", "xg_base": 0.40, "xga_base": 1.80, "style": "defensive"},
+    {"code": "SCO", "name": "Escocia", "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿", "group": "C", "ranking": 40, "confederation": "UEFA", "xg_base": 1.00, "xga_base": 1.00, "style": "balanced"},
+
+    {"code": "USA", "name": "Estados Unidos", "flag": "🇺🇸", "group": "D", "ranking": 11, "confederation": "CONCACAF", "xg_base": 1.40, "xga_base": 1.00, "style": "offensive", "host": true},
+    {"code": "PAR", "name": "Paraguay", "flag": "🇵🇾", "group": "D", "ranking": 52, "confederation": "CONMEBOL", "xg_base": 0.90, "xga_base": 1.10, "style": "defensive"},
+    {"code": "AUS", "name": "Australia", "flag": "🇦🇺", "group": "D", "ranking": 28, "confederation": "AFC", "xg_base": 1.10, "xga_base": 1.10, "style": "balanced"},
+    {"code": "TUR", "name": "Turquía", "flag": "🇹🇷", "group": "D", "ranking": 26, "confederation": "UEFA", "xg_base": 1.30, "xga_base": 1.10, "style": "offensive"},
+
+    {"code": "GER", "name": "Alemania", "flag": "🇩🇪", "group": "E", "ranking": 9, "confederation": "UEFA", "xg_base": 1.80, "xga_base": 0.90, "style": "offensive"},
+    {"code": "CUW", "name": "Curazao", "flag": "🇨🇼", "group": "E", "ranking": 100, "confederation": "CONCACAF", "xg_base": 0.30, "xga_base": 2.00, "style": "defensive"},
+    {"code": "CIV", "name": "Costa de Marfil", "flag": "🇨🇮", "group": "E", "ranking": 38, "confederation": "CAF", "xg_base": 1.00, "xga_base": 1.00, "style": "balanced"},
+    {"code": "ECU", "name": "Ecuador", "flag": "🇪🇨", "group": "E", "ranking": 30, "confederation": "CONMEBOL", "xg_base": 1.10, "xga_base": 1.00, "style": "balanced"},
+
+    {"code": "NED", "name": "Países Bajos", "flag": "🇳🇱", "group": "F", "ranking": 7, "confederation": "UEFA", "xg_base": 1.70, "xga_base": 0.80, "style": "offensive"},
+    {"code": "JPN", "name": "Japón", "flag": "🇯🇵", "group": "F", "ranking": 16, "confederation": "AFC", "xg_base": 1.40, "xga_base": 1.00, "style": "offensive"},
+    {"code": "SWE", "name": "Suecia", "flag": "🇸🇪", "group": "F", "ranking": 25, "confederation": "UEFA", "xg_base": 1.20, "xga_base": 1.00, "style": "balanced"},
+    {"code": "TUN", "name": "Túnez", "flag": "🇹🇳", "group": "F", "ranking": 42, "confederation": "CAF", "xg_base": 0.80, "xga_base": 1.00, "style": "defensive"},
+
+    {"code": "BEL", "name": "Bélgica", "flag": "🇧🇪", "group": "G", "ranking": 5, "confederation": "UEFA", "xg_base": 1.50, "xga_base": 0.90, "style": "balanced"},
+    {"code": "EGY", "name": "Egipto", "flag": "🇪🇬", "group": "G", "ranking": 35, "confederation": "CAF", "xg_base": 1.00, "xga_base": 0.90, "style": "defensive"},
+    {"code": "IRN", "name": "Irán", "flag": "🇮🇷", "group": "G", "ranking": 32, "confederation": "AFC", "xg_base": 1.00, "xga_base": 1.00, "style": "defensive"},
+    {"code": "NZL", "name": "Nueva Zelanda", "flag": "🇳🇿", "group": "G", "ranking": 75, "confederation": "OFC", "xg_base": 0.70, "xga_base": 1.30, "style": "defensive"},
+
+    {"code": "ESP", "name": "España", "flag": "🇪🇸", "group": "H", "ranking": 8, "confederation": "UEFA", "xg_base": 1.70, "xga_base": 0.70, "style": "offensive"},
+    {"code": "CPV", "name": "Cabo Verde", "flag": "🇨🇻", "group": "H", "ranking": 70, "confederation": "CAF", "xg_base": 0.60, "xga_base": 1.00, "style": "defensive"},
+    {"code": "KSA", "name": "Arabia Saudita", "flag": "🇸🇦", "group": "H", "ranking": 55, "confederation": "AFC", "xg_base": 0.80, "xga_base": 1.20, "style": "balanced"},
+    {"code": "URU", "name": "Uruguay", "flag": "🇺🇾", "group": "H", "ranking": 13, "confederation": "CONMEBOL", "xg_base": 1.30, "xga_base": 0.70, "style": "balanced"},
+
+    {"code": "FRA", "name": "Francia", "flag": "🇫🇷", "group": "I", "ranking": 2, "confederation": "UEFA", "xg_base": 1.90, "xga_base": 0.70, "style": "balanced"},
+    {"code": "SEN", "name": "Senegal", "flag": "🇸🇳", "group": "I", "ranking": 21, "confederation": "CAF", "xg_base": 1.10, "xga_base": 1.00, "style": "balanced"},
+    {"code": "IRQ", "name": "Irak", "flag": "🇮🇶", "group": "I", "ranking": 55, "confederation": "AFC", "xg_base": 0.70, "xga_base": 1.30, "style": "defensive"},
+    {"code": "NOR", "name": "Noruega", "flag": "🇳🇴", "group": "I", "ranking": 24, "confederation": "UEFA", "xg_base": 1.30, "xga_base": 1.10, "style": "offensive"},
+
+    {"code": "ARG", "name": "Argentina", "flag": "🇦🇷", "group": "J", "ranking": 1, "confederation": "CONMEBOL", "xg_base": 2.00, "xga_base": 0.70, "style": "offensive"},
+    {"code": "ALG", "name": "Argelia", "flag": "🇩🇿", "group": "J", "ranking": 36, "confederation": "CAF", "xg_base": 1.00, "xga_base": 1.00, "style": "balanced"},
+    {"code": "AUT", "name": "Austria", "flag": "🇦🇹", "group": "J", "ranking": 22, "confederation": "UEFA", "xg_base": 1.20, "xga_base": 1.00, "style": "offensive"},
+    {"code": "JOR", "name": "Jordania", "flag": "🇯🇴", "group": "J", "ranking": 68, "confederation": "AFC", "xg_base": 0.70, "xga_base": 1.20, "style": "defensive"},
+
+    {"code": "POR", "name": "Portugal", "flag": "🇵🇹", "group": "K", "ranking": 6, "confederation": "UEFA", "xg_base": 1.70, "xga_base": 0.70, "style": "balanced"},
+    {"code": "COD", "name": "RD Congo", "flag": "🇨🇩", "group": "K", "ranking": 60, "confederation": "CAF", "xg_base": 0.90, "xga_base": 1.10, "style": "balanced"},
+    {"code": "UZB", "name": "Uzbekistán", "flag": "🇺🇿", "group": "K", "ranking": 63, "confederation": "AFC", "xg_base": 0.80, "xga_base": 1.20, "style": "defensive"},
+    {"code": "COL", "name": "Colombia", "flag": "🇨🇴", "group": "K", "ranking": 10, "confederation": "CONMEBOL", "xg_base": 1.40, "xga_base": 0.90, "style": "offensive"},
+
+    {"code": "ENG", "name": "Inglaterra", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "group": "L", "ranking": 4, "confederation": "UEFA", "xg_base": 1.80, "xga_base": 0.80, "style": "offensive"},
+    {"code": "CRO", "name": "Croacia", "flag": "🇭🇷", "group": "L", "ranking": 12, "confederation": "UEFA", "xg_base": 1.30, "xga_base": 0.90, "style": "balanced"},
+    {"code": "GHA", "name": "Ghana", "flag": "🇬🇭", "group": "L", "ranking": 48, "confederation": "CAF", "xg_base": 0.90, "xga_base": 1.20, "style": "balanced"},
+    {"code": "PAN", "name": "Panamá", "flag": "🇵🇦", "group": "L", "ranking": 56, "confederation": "CONCACAF", "xg_base": 0.70, "xga_base": 1.20, "style": "defensive"}
+  ],
+  "groups": {
+    "A": ["MEX", "RSA", "KOR", "CZE"],
+    "B": ["CAN", "BIH", "QAT", "SUI"],
+    "C": ["BRA", "MAR", "HAI", "SCO"],
+    "D": ["USA", "PAR", "AUS", "TUR"],
+    "E": ["GER", "CUW", "CIV", "ECU"],
+    "F": ["NED", "JPN", "SWE", "TUN"],
+    "G": ["BEL", "EGY", "IRN", "NZL"],
+    "H": ["ESP", "CPV", "KSA", "URU"],
+    "I": ["FRA", "SEN", "IRQ", "NOR"],
+    "J": ["ARG", "ALG", "AUT", "JOR"],
+    "K": ["POR", "COD", "UZB", "COL"],
+    "L": ["ENG", "CRO", "GHA", "PAN"]
+  },
+  "tournament_info": {
+    "name": "FIFA World Cup 2026",
+    "hosts": ["USA", "CAN", "MEX"],
+    "start_date": "2026-06-11",
+    "end_date": "2026-07-19",
+    "total_teams": 48,
+    "total_groups": 12,
+    "format": "Top 2 per group + 8 best 3rd-place teams advance to Round of 32"
+  }
+}

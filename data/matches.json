@@ -1,0 +1,56 @@
+{
+  "matches": [
+    {"date": "2026-06-11", "matchday": 1, "group": "A", "home": "MEX", "away": "RSA", "home_goals": 2, "away_goals": 0, "status": "played", "venue": "Ciudad de México"},
+    {"date": "2026-06-11", "matchday": 1, "group": "A", "home": "KOR", "away": "CZE", "home_goals": 2, "away_goals": 1, "status": "played", "venue": "Los Angeles"},
+    {"date": "2026-06-12", "matchday": 1, "group": "B", "home": "CAN", "away": "BIH", "home_goals": 1, "away_goals": 1, "status": "played", "venue": "Toronto"},
+    {"date": "2026-06-12", "matchday": 1, "group": "D", "home": "USA", "away": "PAR", "home_goals": 4, "away_goals": 1, "status": "played", "venue": "Seattle"},
+    {"date": "2026-06-13", "matchday": 1, "group": "B", "home": "QAT", "away": "SUI", "home_goals": 1, "away_goals": 1, "status": "played", "venue": "Houston"},
+    {"date": "2026-06-13", "matchday": 1, "group": "C", "home": "BRA", "away": "MAR", "home_goals": 1, "away_goals": 1, "status": "played", "venue": "Miami"},
+    {"date": "2026-06-13", "matchday": 1, "group": "C", "home": "SCO", "away": "HAI", "home_goals": 1, "away_goals": 0, "status": "played", "venue": "Atlanta"},
+    {"date": "2026-06-13", "matchday": 1, "group": "D", "home": "AUS", "away": "TUR", "home_goals": 2, "away_goals": 0, "status": "played", "venue": "Dallas"},
+    {"date": "2026-06-14", "matchday": 1, "group": "E", "home": "GER", "away": "CUW", "home_goals": 7, "away_goals": 1, "status": "played", "venue": "Toronto"},
+    {"date": "2026-06-14", "matchday": 1, "group": "F", "home": "NED", "away": "JPN", "home_goals": 2, "away_goals": 2, "status": "played", "venue": "Philadelphia"},
+    {"date": "2026-06-14", "matchday": 1, "group": "E", "home": "CIV", "away": "ECU", "home_goals": 1, "away_goals": 0, "status": "played", "venue": "Kansas City"},
+    {"date": "2026-06-14", "matchday": 1, "group": "F", "home": "SWE", "away": "TUN", "home_goals": 5, "away_goals": 1, "status": "played", "venue": "Houston"},
+    {"date": "2026-06-15", "matchday": 1, "group": "H", "home": "ESP", "away": "CPV", "home_goals": 0, "away_goals": 0, "status": "played", "venue": "New York"},
+    {"date": "2026-06-15", "matchday": 1, "group": "G", "home": "BEL", "away": "EGY", "home_goals": 1, "away_goals": 1, "status": "played", "venue": "Boston"},
+    {"date": "2026-06-16", "matchday": 1, "group": "H", "home": "KSA", "away": "URU", "home_goals": 1, "away_goals": 1, "status": "played", "venue": "Miami"},
+    {"date": "2026-06-16", "matchday": 1, "group": "G", "home": "IRN", "away": "NZL", "home_goals": 2, "away_goals": 2, "status": "played", "venue": "Vancouver"},
+    {"date": "2026-06-16", "matchday": 1, "group": "I", "home": "FRA", "away": "SEN", "home_goals": 3, "away_goals": 1, "status": "played", "venue": "Philadelphia"},
+    {"date": "2026-06-17", "matchday": 1, "group": "I", "home": "IRQ", "away": "NOR", "home_goals": 1, "away_goals": 4, "status": "played", "venue": "New York"},
+    {"date": "2026-06-17", "matchday": 1, "group": "J", "home": "ARG", "away": "ALG", "home_goals": 3, "away_goals": 0, "status": "played", "venue": "Dallas"},
+    {"date": "2026-06-17", "matchday": 1, "group": "J", "home": "AUT", "away": "JOR", "home_goals": 2, "away_goals": 1, "status": "played", "venue": "San Francisco"},
+    {"date": "2026-06-17", "matchday": 1, "group": "K", "home": "POR", "away": "COD", "home_goals": 1, "away_goals": 1, "status": "played", "venue": "Los Angeles"},
+    {"date": "2026-06-17", "matchday": 1, "group": "L", "home": "ENG", "away": "CRO", "home_goals": 4, "away_goals": 2, "status": "played", "venue": "Boston"},
+    {"date": "2026-06-18", "matchday": 1, "group": "L", "home": "GHA", "away": "PAN", "home_goals": 1, "away_goals": 0, "status": "played", "venue": "Atlanta"},
+    {"date": "2026-06-18", "matchday": 1, "group": "K", "home": "UZB", "away": "COL", "home_goals": 1, "away_goals": 3, "status": "played", "venue": "Dallas"},
+    {"date": "2026-06-18", "matchday": 2, "group": "A", "home": "CZE", "away": "RSA", "home_goals": 1, "away_goals": 1, "status": "played", "venue": "Kansas City"},
+    {"date": "2026-06-18", "matchday": 2, "group": "B", "home": "SUI", "away": "BIH", "home_goals": 4, "away_goals": 1, "status": "played", "venue": "Houston"},
+    {"date": "2026-06-19", "matchday": 2, "group": "B", "home": "CAN", "away": "QAT", "home_goals": 6, "away_goals": 0, "status": "played", "venue": "Toronto"},
+    {"date": "2026-06-19", "matchday": 2, "group": "A", "home": "MEX", "away": "KOR", "home_goals": 1, "away_goals": 0, "status": "played", "venue": "Ciudad de México"},
+
+    {"date": "2026-06-20", "matchday": 2, "group": "F", "home": "NED", "away": "SWE", "status": "scheduled", "venue": "Houston"},
+    {"date": "2026-06-20", "matchday": 2, "group": "E", "home": "GER", "away": "CIV", "status": "scheduled", "venue": "Toronto"},
+    {"date": "2026-06-20", "matchday": 2, "group": "E", "home": "ECU", "away": "CUW", "status": "scheduled", "venue": "Kansas City"},
+    {"date": "2026-06-20", "matchday": 2, "group": "F", "home": "TUN", "away": "JPN", "status": "scheduled", "venue": "Monterrey"},
+
+    {"date": "2026-06-21", "matchday": 2, "group": "H", "home": "ESP", "away": "KSA", "status": "scheduled", "venue": "Atlanta"},
+    {"date": "2026-06-21", "matchday": 2, "group": "G", "home": "BEL", "away": "IRN", "status": "scheduled", "venue": "Los Angeles"},
+    {"date": "2026-06-21", "matchday": 2, "group": "H", "home": "URU", "away": "CPV", "status": "scheduled", "venue": "Miami"},
+    {"date": "2026-06-21", "matchday": 2, "group": "G", "home": "NZL", "away": "EGY", "status": "scheduled", "venue": "Vancouver"},
+
+    {"date": "2026-06-22", "matchday": 2, "group": "J", "home": "ARG", "away": "AUT", "status": "scheduled", "venue": "Dallas"},
+    {"date": "2026-06-22", "matchday": 2, "group": "I", "home": "FRA", "away": "IRQ", "status": "scheduled", "venue": "Philadelphia"},
+    {"date": "2026-06-22", "matchday": 2, "group": "I", "home": "NOR", "away": "SEN", "status": "scheduled", "venue": "New York"},
+    {"date": "2026-06-22", "matchday": 2, "group": "J", "home": "JOR", "away": "ALG", "status": "scheduled", "venue": "San Francisco"}
+  ],
+  "tournament_stats": {
+    "matches_played": 28,
+    "total_goals": 67,
+    "avg_goals_per_match": 2.39,
+    "draws": 9,
+    "home_wins": 13,
+    "away_wins": 6,
+    "last_updated": "2026-06-20T00:00:00Z"
+  }
+}

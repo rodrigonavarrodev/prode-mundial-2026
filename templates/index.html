@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Simulador de partidos del Mundial 2026 usando modelo Dixon-Coles con Monte Carlo. Predicciones educativas para prode.">
+  <title>⚽ Prode Mundial 2026 — Simulador Dixon-Coles</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="app-container">
+
+    <!-- ====== HEADER ====== -->
+    <header class="app-header">
+      <h1>⚽ Prode Mundial 2026</h1>
+      <p class="subtitle">Simulador de partidos · Poisson Bivariado + Dixon-Coles · Monte Carlo</p>
+      <span class="badge">🏟️ Canadá · México · Estados Unidos</span>
+    </header>
+
+    <!-- ====== TABS ====== -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="simulator">🎯 Simulador</button>
+      <button class="tab-btn" data-tab="groups">📊 Grupos</button>
+      <button class="tab-btn" data-tab="calendar">📅 Calendario</button>
+    </div>
+
+    <!-- ====== TAB: SIMULATOR ====== -->
+    <div id="tab-simulator" class="tab-content active">
+
+      <!-- Match Selector -->
+      <section class="section">
+        <div class="match-selector">
+          <div class="card team-select-card">
+            <span class="flag" id="home-flag">🏠</span>
+            <select id="home-team">
+              <option value="">Seleccioná equipo local</option>
+            </select>
+          </div>
+          <div class="vs-badge">VS</div>
+          <div class="card team-select-card">
+            <span class="flag" id="away-flag">🏟️</span>
+            <select id="away-team">
+              <option value="">Seleccioná equipo visitante</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Match Buttons -->
+      <section class="section">
+        <div class="card">
+          <div class="card-header">
+            <span class="icon">📅</span>
+            <h2>Próximos partidos</h2>
+          </div>
+          <div id="upcoming-matches" style="display:flex;flex-wrap:wrap;gap:8px;"></div>
+        </div>
+      </section>
+
+      <!-- Parameters -->
+      <section class="section">
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-header">
+              <span class="icon">⚙️</span>
+              <h2>Parámetros del Modelo</h2>
+            </div>
+            <div class="param-group">
+              <label>xG Local <span class="value" id="lam-home-val">1.40</span></label>
+              <input type="range" id="lam-home" min="0.1" max="3.5" step="0.05" value="1.40">
+            </div>
+            <div class="param-group">
+              <label>xG Visitante <span class="value" id="lam-away-val">1.00</span></label>
+              <input type="range" id="lam-away" min="0.1" max="3.5" step="0.05" value="1.00">
+            </div>
+            <div class="param-group">
+              <label>ρ (Dixon-Coles) <span class="value" id="rho-val">-0.06</span></label>
+              <input type="range" id="rho" min="-0.10" max="-0.02" step="0.01" value="-0.06">
+            </div>
+            <div class="param-group">
+              <label>Simulaciones <span class="value" id="nsims-val">300,000</span></label>
+              <input type="range" id="nsims" min="50000" max="500000" step="50000" value="300000">
+            </div>
+            <button class="btn btn-secondary btn-sm btn-block mt-2" id="btn-auto-calibrate">🤖 Auto-calibrar xG</button>
+          </div>
+
+          <!-- Calibration Info -->
+          <div class="card">
+            <div class="card-header">
+              <span class="icon">📋</span>
+              <h2>Calibración</h2>
+            </div>
+            <div id="calibration-info">
+              <p class="text-muted text-sm">Seleccioná dos equipos para ver la calibración sugerida.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Market Odds (optional) -->
+      <section class="section">
+        <div class="card">
+          <div class="card-header">
+            <span class="icon">💹</span>
+            <h2>Cuotas del mercado (opcional, para validación)</h2>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+            <div class="param-group">
+              <label>Local <span class="value" id="odds-home-val">—</span></label>
+              <input type="number" id="odds-home" placeholder="ej: 1.50" step="0.01" min="1.01"
+                style="width:100%;padding:8px 12px;background:var(--bg-secondary);color:var(--text-primary);border:1px solid var(--border-glass);border-radius:var(--radius-sm);font-family:var(--font-mono);">
+            </div>
+            <div class="param-group">
+              <label>Empate <span class="value" id="odds-draw-val">—</span></label>
+              <input type="number" id="odds-draw" placeholder="ej: 4.00" step="0.01" min="1.01"
+                style="width:100%;padding:8px 12px;background:var(--bg-secondary);color:var(--text-primary);border:1px solid var(--border-glass);border-radius:var(--radius-sm);font-family:var(--font-mono);">
+            </div>
+            <div class="param-group">
+              <label>Visitante <span class="value" id="odds-away-val">—</span></label>
+              <input type="number" id="odds-away" placeholder="ej: 7.00" step="0.01" min="1.01"
+                style="width:100%;padding:8px 12px;background:var(--bg-secondary);color:var(--text-primary);border:1px solid var(--border-glass);border-radius:var(--radius-sm);font-family:var(--font-mono);">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Simulate Button -->
+      <section class="section text-center">
+        <button class="btn btn-primary" id="btn-simulate" disabled>
+          🚀 SIMULAR PARTIDO
+        </button>
+      </section>
+
+      <!-- ====== RESULTS ====== -->
+      <div id="results-section">
+
+        <!-- 1X2 -->
+        <section class="section">
+          <div class="card">
+            <div class="card-header">
+              <span class="icon">📊</span>
+              <h2>Probabilidades 1X2</h2>
+            </div>
+            <div class="one-x-two" id="one-x-two"></div>
+          </div>
+        </section>
+
+        <div class="grid-2">
+          <!-- Heatmap -->
+          <div class="card">
+            <div class="card-header">
+              <span class="icon">🔥</span>
+              <h2>Matriz de Marcadores</h2>
+            </div>
+            <div class="heatmap-container" id="heatmap-container"></div>
+          </div>
+
+          <!-- Top Scores -->
+          <div class="card">
+            <div class="card-header">
+              <span class="icon">🎯</span>
+              <h2>Marcadores más probables</h2>
+            </div>
+            <div class="score-list" id="exact-scores"></div>
+          </div>
+        </div>
+
+        <div class="grid-2 mt-2">
+          <!-- Over/Under -->
+          <div class="card">
+            <div class="card-header">
+              <span class="icon">⚽</span>
+              <h2>Mercado de Goles</h2>
+            </div>
+            <div id="over-under-markets"></div>
+          </div>
+
+          <!-- BTTS + Clean Sheet -->
+          <div class="card">
+            <div class="card-header">
+              <span class="icon">🥅</span>
+              <h2>Ambos Marcan / Valla Invicta</h2>
+            </div>
+            <div id="btts-cs-markets"></div>
+          </div>
+        </div>
+
+        <!-- Validation -->
+        <section class="section mt-2" id="validation-section" style="display:none;">
+          <div class="card">
+            <div class="card-header">
+              <span class="icon">✅</span>
+              <h2>Validación vs Mercado</h2>
+            </div>
+            <div id="validation-content"></div>
+          </div>
+        </section>
+
+        <!-- Confidence + Recommendation -->
+        <div class="grid-2 mt-2">
+          <div class="card text-center" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <div class="card-header" style="justify-content:center;">
+              <span class="icon">🎚️</span>
+              <h2>Índice de Confianza</h2>
+            </div>
+            <div id="confidence-badge"></div>
+            <p class="text-muted text-xs mt-1" id="confidence-explanation"></p>
+          </div>
+
+          <div class="recommendation-card" id="recommendation-card">
+            <div class="rec-title">Recomendación para el prode</div>
+            <div class="rec-result" id="rec-result"></div>
+            <div class="rec-score" id="rec-score"></div>
+            <p class="text-muted text-xs mt-1">⚠️ Esto NO es certeza. Es el escenario más probable del modelo.</p>
+          </div>
+        </div>
+
+        <!-- Summary Stats -->
+        <section class="section mt-2">
+          <div class="card">
+            <div class="card-header">
+              <span class="icon">📈</span>
+              <h2>Resumen de la Simulación</h2>
+            </div>
+            <div id="summary-stats" class="grid-4"></div>
+          </div>
+        </section>
+      </div>
+
+    </div>
+
+    <!-- ====== TAB: GROUPS ====== -->
+    <div id="tab-groups" class="tab-content">
+      <div class="grid-3" id="groups-container">
+        <p class="text-muted">Cargando grupos...</p>
+      </div>
+    </div>
+
+    <!-- ====== TAB: CALENDAR ====== -->
+    <div id="tab-calendar" class="tab-content">
+      <div id="calendar-container">
+        <p class="text-muted">Cargando calendario...</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Loading Overlay -->
+  <div class="loading-overlay" id="loading-overlay">
+    <div class="spinner"></div>
+    <div class="loading-text">Corriendo 300,000 simulaciones...</div>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
